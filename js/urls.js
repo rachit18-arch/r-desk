@@ -363,7 +363,7 @@ async function pos() {
                     : cell10.setAttribute("class", "red");
                 row.insertCell(9).innerHTML = 0;
                 row.insertCell(10).innerHTML = 50;
-                row.insertCell(11).innerHTML = element.dname.split(" ")[1];
+                row.insertCell(11).innerHTML = element.exch == "NFO"? element.dname.split(" ")[1]: element.dname;
                 row.insertCell(12).innerHTML = 0;
                 let cell14 = row.insertCell(13);
                 cell14.innerHTML = element.tsym;
