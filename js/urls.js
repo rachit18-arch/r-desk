@@ -318,413 +318,58 @@ async function pos() {
 			return a.netqty - b.netqty;
 		});
 		setTimeout(() => {
-			let fnoScirpts = [
-				{ value: '26009', name: 'BANKNIFTY' },
-				{ value: '26000', name: 'NIFTY' },
-				{ value: '26037', name: 'FINNIFTY' },
-				{ value: '26074', name: 'MIDCPNIFTY' },
-				{ value: '7', name: 'AARTIIND' },
-				{ value: '13', name: 'ABB' },
-				{ value: '17903', name: 'ABBOTINDIA' },
-				{ value: '21614', name: 'ABCAPITAL' },
-				{ value: '30108', name: 'ABFRL' },
-				{ value: '22', name: 'ACC' },
-				{ value: '25', name: 'ADANIENT' },
-				{ value: '15083', name: 'ADANIPORTS' },
-				{ value: '11703', name: 'ALKEM' },
-				{ value: '100', name: 'AMARAJABAT' },
-				{ value: '1270', name: 'AMBUJACEM' },
-				{ value: '157', name: 'APOLLOHOSP' },
-				{ value: '163', name: 'APOLLOTYRE' },
-				{ value: '212', name: 'ASHOKLEY' },
-				{ value: '236', name: 'ASIANPAINT' },
-				{ value: '14418', name: 'ASTRAL' },
-				{ value: '263', name: 'ATUL' },
-				{ value: '21238', name: 'AUBANK' },
-				{ value: '275', name: 'AUROPHARMA' },
-				{ value: '5900', name: 'AXISBANK' },
-				{ value: '16669', name: 'BAJAJ - AUTO' },
-				{ value: '16675', name: 'BAJAJFINSV' },
-				{ value: '317', name: 'BAJFINANCE' },
-				{ value: '335', name: 'BALKRISIND' },
-				{ value: '341', name: 'BALRAMCHIN' },
-				{ value: '2263', name: 'BANDHANBNK' },
-				{ value: '4668', name: 'BANKBARODA' },
-				{ value: '371', name: 'BATAINDIA' },
-				{ value: '383', name: 'BEL' },
-				{ value: '404', name: 'BERGEPAINT' },
-				{ value: '422', name: 'BHARATFORG' },
-				{ value: '10604', name: 'BHARTIARTL' },
-				{ value: '438', name: 'BHEL' },
-				{ value: '11373', name: 'BIOCON' },
-				{ value: '2181', name: 'BOSCHLTD' },
-				{ value: '526', name: 'BPCL' },
-				{ value: '547', name: 'BRITANNIA' },
-				{ value: '6994', name: 'BSOFT' },
-				{ value: '10794', name: 'CANBK' },
-				{ value: '583', name: 'CANFINHOME' },
-				{ value: '637', name: 'CHAMBLFERT' },
-				{ value: '685', name: 'CHOLAFIN' },
-				{ value: '694', name: 'CIPLA' },
-				{ value: '20374', name: 'COALINDIA' },
-				{ value: '11543', name: 'COFORGE' },
-				{ value: '15141', name: 'COLPAL' },
-				{ value: '4749', name: 'CONCOR' },
-				{ value: '739', name: 'COROMANDEL' },
-				{ value: '17094', name: 'CROMPTON' },
-				{ value: '5701', name: 'CUB' },
-				{ value: '1901', name: 'CUMMINSIND' },
-				{ value: '772', name: 'DABUR' },
-				{ value: '8075', name: 'DALBHARAT' },
-				{ value: '19943', name: 'DEEPAKNTR' },
-				{ value: '15044', name: 'DELTACORP' },
-				{ value: '10940', name: 'DIVISLAB' },
-				{ value: '21690', name: 'DIXON' },
-				{ value: '14732', name: 'DLF' },
-				{ value: '881', name: 'DRREDDY' },
-				{ value: '910', name: 'EICHERMOT' },
-				{ value: '958', name: 'ESCORTS' },
-				{ value: '676', name: 'EXIDEIND' },
-				{ value: '1023', name: 'FEDERALBNK' },
-				{ value: '14304', name: 'FSL' },
-				{ value: '4717', name: 'GAIL' },
-				{ value: '7406', name: 'GLENMARK' },
-				{ value: '13528', name: 'GMRINFRA' },
-				{ value: '1174', name: 'GNFC' },
-				{ value: '10099', name: 'GODREJCP' },
-				{ value: '17875', name: 'GODREJPROP' },
-				{ value: '11872', name: 'GRANULES' },
-				{ value: '1232', name: 'GRASIM' },
-				{ value: '13197', name: 'GSPL' },
-				{ value: '10599', name: 'GUJGASLTD' },
-				{ value: '2303', name: 'HAL' },
-				{ value: '9819', name: 'HAVELLS' },
-				{ value: '7229', name: 'HCLTECH' },
-				{ value: '1330', name: 'HDFC' },
-				{ value: '4244', name: 'HDFCAMC' },
-				{ value: '1333', name: 'HDFCBANK' },
-				{ value: '467', name: 'HDFCLIFE' },
-				{ value: '1348', name: 'HEROMOTOCO' },
-				{ value: '1363', name: 'HINDALCO' },
-				{ value: '17939', name: 'HINDCOPPER' },
-				{ value: '1406', name: 'HINDPETRO' },
-				{ value: '1394', name: 'HINDUNILVR' },
-				{ value: '3417', name: 'HONAUT' },
-				{ value: '30125', name: 'IBULHSGFIN' },
-				{ value: '4963', name: 'ICICIBANK' },
-				{ value: '21770', name: 'ICICIGI' },
-				{ value: '18652', name: 'ICICIPRULI' },
-				{ value: '14366', name: 'IDEA' },
-				{ value: '11957', name: 'IDFC' },
-				{ value: '11184', name: 'IDFCFIRSTB' },
-				{ value: '220', name: 'IEX' },
-				{ value: '11262', name: 'IGL' },
-				{ value: '1512', name: 'INDHOTEL' },
-				{ value: '1515', name: 'INDIACEM' },
-				{ value: '10726', name: 'INDIAMART' },
-				{ value: '11195', name: 'INDIGO' },
-				{ value: '5258', name: 'INDUSINDBK' },
-				{ value: '29135', name: 'INDUSTOWER' },
-				{ value: '1594', name: 'INFY' },
-				{ value: '5926', name: 'INTELLECT' },
-				{ value: '1624', name: 'IOC' },
-				{ value: '1633', name: 'IPCALAB' },
-				{ value: '13611', name: 'IRCTC' },
-				{ value: '1660', name: 'ITC' },
-				{ value: '6733', name: 'JINDALSTEL' },
-				{ value: '13270', name: 'JKCEMENT' },
-				{ value: '11723', name: 'JSWSTEEL' },
-				{ value: '18096', name: 'JUBLFOOD' },
-				{ value: '1922', name: 'KOTAKBANK' },
-				{ value: '24948', name: 'L & TFH' },
-				{ value: '11654', name: 'LALPATHLAB' },
-				{ value: '19234', name: 'LAURUSLABS' },
-				{ value: '1997', name: 'LICHSGFIN' },
-				{ value: '11483', name: 'LT' },
-				{ value: '17818', name: 'LTI' },
-				{ value: '18564', name: 'LTTS' },
-				{ value: '10440', name: 'LUPIN' },
-				{ value: '2031', name: 'M & M' },
-				{ value: '13285', name: 'M & MFIN' },
-				{ value: '19061', name: 'MANAPPURAM' },
-				{ value: '4067', name: 'MARICO' },
-				{ value: '10999', name: 'MARUTI' },
-				{ value: '10447', name: 'MCDOWELL - N' },
-				{ value: '31181', name: 'MCX' },
-				{ value: '9581', name: 'METROPOLIS' },
-				{ value: '2142', name: 'MFSL' },
-				{ value: '17534', name: 'MGL' },
-				{ value: '14356', name: 'MINDTREE' },
-				{ value: '4204', name: 'MOTHERSON' },
-				{ value: '4503', name: 'MPHASIS' },
-				{ value: '2277', name: 'MRF' },
-				{ value: '23650', name: 'MUTHOOTFIN' },
-				{ value: '6364', name: 'NATIONALUM' },
-				{ value: '13751', name: 'NAUKRI' },
-				{ value: '14672', name: 'NAVINFLUOR' },
-				{ value: '17963', name: 'NESTLEIND' },
-				{ value: '15332', name: 'NMDC' },
-				{ value: '11630', name: 'NTPC' },
-				{ value: '20242', name: 'OBEROIRLTY' },
-				{ value: '10738', name: 'OFSS' },
-				{ value: '2475', name: 'ONGC' },
-				{ value: '14413', name: 'PAGEIND' },
-				{ value: '2412', name: 'PEL' },
-				{ value: '18365', name: 'PERSISTENT' },
-				{ value: '11351', name: 'PETRONET' },
-				{ value: '14299', name: 'PFC' },
-				{ value: '2664', name: 'PIDILITIND' },
-				{ value: '24184', name: 'PIIND' },
-				{ value: '10666', name: 'PNB' },
-				{ value: '9590', name: 'POLYCAB' },
-				{ value: '14977', name: 'POWERGRID' },
-				{ value: '13147', name: 'PVR' },
-				{ value: '15337', name: 'RAIN' },
-				{ value: '2043', name: 'RAMCOCEM' },
-				{ value: '18391', name: 'RBLBANK' },
-				{ value: '15355', name: 'RECLTD' },
-				{ value: '2885', name: 'RELIANCE' },
-				{ value: '2963', name: 'SAIL' },
-				{ value: '17971', name: 'SBICARD' },
-				{ value: '21808', name: 'SBILIFE' },
-				{ value: '3045', name: 'SBIN' },
-				{ value: '3103', name: 'SHREECEM' },
-				{ value: '3150', name: 'SIEMENS' },
-				{ value: '3273', name: 'SRF' },
-				{ value: '4306', name: 'SRTRANSFIN' },
-				{ value: '3351', name: 'SUNPHARMA' },
-				{ value: '13404', name: 'SUNTV' },
-				{ value: '10243', name: 'SYNGENE' },
-				{ value: '3405', name: 'TATACHEM' },
-				{ value: '3721', name: 'TATACOMM' },
-				{ value: '3432', name: 'TATACONSUM' },
-				{ value: '3456', name: 'TATAMOTORS' },
-				{ value: '3426', name: 'TATAPOWER' },
-				{ value: '3499', name: 'TATASTEEL' },
-				{ value: '11536', name: 'TCS' },
-				{ value: '13538', name: 'TECHM' },
-				{ value: '3506', name: 'TITAN' },
-				{ value: '3518', name: 'TORNTPHARM' },
-				{ value: '13786', name: 'TORNTPOWER' },
-				{ value: '1964', name: 'TRENT' },
-				{ value: '8479', name: 'TVSMOTOR' },
-				{ value: '16713', name: 'UBL' },
-				{ value: '11532', name: 'ULTRACEMCO' },
-				{ value: '11287', name: 'UPL' },
-				{ value: '3063', name: 'VEDL' },
-				{ value: '3718', name: 'VOLTAS' },
-				{ value: '18011', name: 'WHIRLPOOL' },
-				{ value: '3787', name: 'WIPRO' },
-				{ value: '3812', name: 'ZEEL' },
-				{ value: '7929', name: 'ZYDUSLIFE' }
-			]
-			let data1 = [];
 			pos.forEach((element) => {
-				if (element.exch == "NSE" || element.exch == "BSE" || element.exch == "MCX" || element.exch == "CDS" || element.exch == "BCD") {
-					let row = posbody.insertRow(-1);
-					row.classList.add("posTr");
-					element.netqty == 0 ? row.classList.add('fade-pos') : row.classList.remove('fade-pos');
-					// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-					row.insertCell(0).innerHTML =
-						element.netqty != 0
-							? `<input type="checkbox" name="click" onclick="show()" class= "cb">`
-							: ""; //check box
-					let cell2 = row.insertCell(1); //product
-					cell2.innerHTML =
-						element.prd == "M" || element.prd == "C" ? "NRML" : "MIS";
-					cell2.classList.add("badge");
-					cell2.classList.add("bg-secondary");
-					row.insertCell(
-						2
-					).innerHTML = `<button class="convert" onclick = "convert(this)"><i class="fa-solid fa-rotate"></i></button> <button class="exit" onclick = "exit(this)"><i class="fa-solid fa-xmark"></i></button>`; //modify
-					row.insertCell(3).innerHTML = element.dname ? element.dname : element.tsym;
-					row.insertCell(4).innerHTML = element.exch;
-					row.insertCell(5).innerHTML = element.netqty;
-					row.insertCell(6).innerHTML =
-						element.daybuyqty == "0" && element.daysellqty == "0"
-							? element.upldprc
-							: element.netavgprc;
-					row.insertCell(7).setAttribute("id", element.token);
-					let cell12 = row.insertCell(8);
-					cell12.innerHTML = "0.00";
-					cell12.setAttribute("class", "green");
-					let cell10 = row.insertCell(9);
-					let a = 0;
-					if (parseInt(element.cfbuyqty) == 0 && parseInt(element.cfsellqty) == 0)
-						a = parseFloat(element.rpnl);
-					else if (parseInt(element.daybuyqty) > 0 && parseInt(element.daybuyqty) > parseInt(element.daysellqty)) {
-						a = (parseFloat(element.upldprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.cfsellqty);
-						a += (parseFloat(element.daysellavgprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.daysellqty);
-					}
-					else if (parseInt(element.daysellqty) > 0 && parseInt(element.daysellqty) > parseInt(element.daybuyqty)) {
-						console.log('here')
-						a = (parseFloat(element.daysellavgprc) - parseFloat(element.upldprc)) * parseInt(element.cfbuyqty);
-						a += (parseFloat(element.daysellavgprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.daybuyqty);
-					}
-					cell10.innerHTML = a.toFixed(2);
-					parseFloat(cell10.innerHTML) >= 0
-						? cell10.setAttribute("class", "green")
-						: cell10.setAttribute("class", "red");
-					row.insertCell(10).innerHTML = 0;
-					row.insertCell(11).innerHTML = 0;
-					row.insertCell(12).innerHTML = 0;
-					let cell14 = row.insertCell(13);
-					cell14.innerHTML = element.tsym;
-					cell14.setAttribute('class', 'd-none')
-					sendMessageToSocket(`{"t":"t","k":"${element.exch}|${element.token}"}`);
-					sendMessageToSocket(`{"t":"d","k":"${element.exch}|${element.token}"}`);
-					setInterval(function () {
-						let rows = document.getElementById("posBody").children;
-						let m = 0;
-						let r = 0;
-						for (let i = 0; i < rows.length; i++) {
-							const element = rows[i];
-							m += parseFloat(element.children[8].innerHTML);
-							r += parseFloat(element.children[9].innerHTML);
-						}
-						let pp = parseFloat(document.getElementById("prevPnl").value);
-						document.getElementById("total").innerHTML = (m + r + pp).toFixed(2);
-						document.getElementById("mtm").innerHTML = m.toFixed(2);
-						document.getElementById("rpnl").innerHTML = r.toFixed(2);
-						m.toFixed(2) >= 0
-							? document.getElementById("mtm").setAttribute("class", "green")
-							: document.getElementById("mtm").setAttribute("class", "red");
-						r.toFixed(2) >= 0
-							? document.getElementById("rpnl").setAttribute("class", "green")
-							: document.getElementById("rpnl").setAttribute("class", "red");
-						document.getElementById("total").innerHTML >= 0
-							? document.getElementById("total").setAttribute("class", "green")
-							: document.getElementById("total").setAttribute("class", "red");
-						let a = document.getElementById('total').innerHTML
-						b = document.getElementById('margin').innerHTML
-						a = parseFloat(a) / parseFloat(b) * 100;
-						document.getElementById('marginused').innerHTML = a.toFixed(2) + " %";
-					}, 1);
-					if (element.netqty != 0) {
-						async function ab() {
-							chartDiv.classList.remove("d-none");
-							let timeValues = {
-								uid: localStorage.getItem("uid"),
-								exch: element.exch,
-								token: element.token,
-								st: `${Math.round((Date.now() - 3456000000) / 1000)}`,
-								et: `${Math.round(Date.now() / 1000)}`,
-								// intrv: '1'
-							};
-							let barData = await all(timeValues, "TPSeries");
-							let colorS = randomRgbColor();
-							let candleSeries = chart.addLineSeries({
-								color: colorS,
-								lineWidth: 2,
-							});
-							let volSeries = null;
-							if (element.netqty < 0) {
-								volSeries = chart.addLineSeries({
-									color: "black",
-									lineWidth: 2,
-									priceFormat: {
-										type: "volume",
-									},
-									priceScaleId: "",
-									scaleMargins: {
-										top: 0.8,
-										bottom: 0.015,
-									},
-								});
-								let vdata = await reverseV(barData);
-								volSeries.setData(vdata);
-							}
-							let pdata = await reverseP(barData);
-							candleSeries.setData(pdata);
-							let lastIndex = barData.length - 1;
-							let currentIndex = lastIndex + 1;
-							let currentBar = {
-								value: null,
-								time: Math.round(Date.now() / 1000) + 19800,
-							};
-							let currentVol = {
-								value: null,
-								time: Math.round(Date.now() / 1000) + 19800,
-							};
-							function mergeTickToBar(result) {
-								currentBar.value = result.lp;
-								candleSeries.update(currentBar);
-								if (result.oi && volSeries != null) {
-									currentVol.value = result.oi;
-									volSeries.update(currentVol);
-								}
-							}
-							let avgPriceLine = {
-								price:
-									element.daybuyqty == "0" && element.daysellqty == "0"
-										? element.upldprc
-										: element.netavgprc,
-								color: colorS,
-								lineWidth: 2,
-								lineStyle: LightweightCharts.LineStyle.Dotted,
-								axisLabelVisible: true,
-								title: element.netqty,
-							};
-							candleSeries.createPriceLine(avgPriceLine);
-							worker.port.addEventListener("message", function (msg) {
-								let result = msg.data;
-								if (result.tk == element.token) {
-									if (result.lp == undefined) {
-										null;
-									} else {
-										mergeTickToBar(result);
-										if (new Date().getSeconds() == 0) {
-											// move to next bar
-											currentIndex++;
-											let timestamp = Math.round(Date.now() / 1000);
-											currentBar = {
-												value: null,
-												time: timestamp + 19800,
-											};
-											currentVol = {
-												value: null,
-												time: timestamp + 19800,
-											};
-										}
-									}
-								}
-							});
-						}
-						ab();
-						const renderOHLC = (d) => {
-							let coloredValues = document.createElement("span");
-							coloredValues.innerHTML = d.value + " ";
-							legend.appendChild(coloredValues);
-						};
-						chart.subscribeCrosshairMove((param) => {
-							legend.innerHTML = "";
-							param.seriesData.forEach((ele) => {
-								renderOHLC(ele);
-							});
-						});
-						let legend = document.getElementById("lengends");
-						legend.className = "three-line-tooltip";
-						legend.style.display = "block";
-						legend.style.color = "white";
-						legend.style.position = "absolute";
-						legend.style.font = "20px";
-						legend.style.left = `${chartDiv.getBoundingClientRect().left + window.scrollX + 20
-							}px`;
-						legend.style.top = `${chartDiv.getBoundingClientRect().top + window.scrollY + 2
-							}px`;
-						legend.style.zIndex = "50";
-					}
-				}
-			});
-			for (let i = 0; i < fnoScirpts.length; i++) {
-				let arr = pos.filter(function (element) {
-					return element.exch == "NFO" && element.dname.split(" ")[0] == fnoScirpts[i].name;
-				})
-				//console.log(arrR)
-				arr.length > 0 ? data1.push([fnoScirpts[i].value, fnoScirpts[i].name, arr]) : null;
-			};
-			data1.forEach(element => {
-				table(element)
+                let row = tbody.insertRow(-1);
+                row.classList.add("posTr");
+                element.netqty == 0 ? row.classList.add('fade-pos') : row.classList.remove('fade-pos');
+                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                row.insertCell(0).innerHTML =
+                    element.netqty != 0
+                        ? `<input type="checkbox" name="click" onclick="show()" class= "cb">`
+                        : ""; //check box
+                let cell2 = row.insertCell(1); //product
+                cell2.innerHTML =
+                    element.prd == "M" || element.prd == "C" ? "NRML" : "MIS";
+                cell2.classList.add("badge");
+                cell2.classList.add("bg-secondary");
+                row.insertCell(
+                    2
+                ).innerHTML = `<button class="convert" onclick = "convert(this)"><i class="fa-solid fa-rotate"></i></button> <button class="exit" onclick = "exit(this)"><i class="fa-solid fa-xmark"></i></button>`; //modify
+                row.insertCell(3).innerHTML = element.dname;
+                row.insertCell(4).innerHTML = element.netqty;
+                row.insertCell(5).innerHTML =
+                    element.daybuyqty == "0" && element.daysellqty == "0"
+                        ? element.upldprc
+                        : element.netavgprc;
+                row.insertCell(6).setAttribute("id", element.token);
+                let cell12 = row.insertCell(7);
+                cell12.innerHTML = "0.00";
+                cell12.setAttribute("class", "green");
+                let cell10 = row.insertCell(8);
+                let a = 0;
+                if (parseInt(element.cfbuyqty) == 0 && parseInt(element.cfsellqty) == 0)
+                    a = parseFloat(element.rpnl);
+                else if (parseInt(element.daybuyqty) > 0 && parseInt(element.daybuyqty) > parseInt(element.daysellqty)) {
+                    a = (parseFloat(element.upldprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.cfsellqty);
+                    a += (parseFloat(element.daysellavgprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.daysellqty);
+                }
+                else if (parseInt(element.daysellqty) > 0 && parseInt(element.daysellqty) > parseInt(element.daybuyqty)) {
+                    a = (parseFloat(element.daysellavgprc) - parseFloat(element.upldprc)) * parseInt(element.cfbuyqty);
+                    a += (parseFloat(element.daysellavgprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.daybuyqty);
+                }
+                cell10.innerHTML = a.toFixed(2);
+                parseFloat(cell10.innerHTML) >= 0
+                    ? cell10.setAttribute("class", "green")
+                    : cell10.setAttribute("class", "red");
+                row.insertCell(9).innerHTML = 0;
+                row.insertCell(10).innerHTML = 50;
+                row.insertCell(11).innerHTML = element.dname.split(" ")[1];
+                row.insertCell(12).innerHTML = 0;
+                let cell14 = row.insertCell(13);
+                cell14.innerHTML = element.tsym;
+                cell14.setAttribute('class', 'd-none')
+                sendMessageToSocket(`{"t":"t","k":"${element.exch}|${element.token}"}`);
+                sendMessageToSocket(`{"t":"d","k":"${element.exch}|${element.token}"}`);
 			});
 			setTimeout(() => {
 				roi();
@@ -809,57 +454,7 @@ function table(element) {
 	nseTable = tabContent.querySelector('#NSEHeader');
 	tabContent.insertBefore(div, nseTable);
 	element[2].forEach(element => {
-		let row = tbody.insertRow(-1);
-		row.classList.add("posTr");
-		element.netqty == 0 ? row.classList.add('fade-pos') : row.classList.remove('fade-pos');
-		// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-		row.insertCell(0).innerHTML =
-			element.netqty != 0
-				? `<input type="checkbox" name="click" onclick="show()" class= "cb">`
-				: ""; //check box
-		let cell2 = row.insertCell(1); //product
-		cell2.innerHTML =
-			element.prd == "M" || element.prd == "C" ? "NRML" : "MIS";
-		cell2.classList.add("badge");
-		cell2.classList.add("bg-secondary");
-		row.insertCell(
-			2
-		).innerHTML = `<button class="convert" onclick = "convert(this)"><i class="fa-solid fa-rotate"></i></button> <button class="exit" onclick = "exit(this)"><i class="fa-solid fa-xmark"></i></button>`; //modify
-		row.insertCell(3).innerHTML = element.dname;
-		row.insertCell(4).innerHTML = element.netqty;
-		row.insertCell(5).innerHTML =
-			element.daybuyqty == "0" && element.daysellqty == "0"
-				? element.upldprc
-				: element.netavgprc;
-		row.insertCell(6).setAttribute("id", element.token);
-		let cell12 = row.insertCell(7);
-		cell12.innerHTML = "0.00";
-		cell12.setAttribute("class", "green");
-		let cell10 = row.insertCell(8);
-		let a = 0;
-		if (parseInt(element.cfbuyqty) == 0 && parseInt(element.cfsellqty) == 0)
-			a = parseFloat(element.rpnl);
-		else if (parseInt(element.daybuyqty) > 0 && parseInt(element.daybuyqty) > parseInt(element.daysellqty)) {
-			a = (parseFloat(element.upldprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.cfsellqty);
-			a += (parseFloat(element.daysellavgprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.daysellqty);
-		}
-		else if (parseInt(element.daysellqty) > 0 && parseInt(element.daysellqty) > parseInt(element.daybuyqty)) {
-			a = (parseFloat(element.daysellavgprc) - parseFloat(element.upldprc)) * parseInt(element.cfbuyqty);
-			a += (parseFloat(element.daysellavgprc) - parseFloat(element.daybuyavgprc)) * parseInt(element.daybuyqty);
-		}
-		cell10.innerHTML = a.toFixed(2);
-		parseFloat(cell10.innerHTML) >= 0
-			? cell10.setAttribute("class", "green")
-			: cell10.setAttribute("class", "red");
-		row.insertCell(9).innerHTML = 0;
-		row.insertCell(10).innerHTML = 50;
-		row.insertCell(11).innerHTML = element.dname.split(" ")[1];
-		row.insertCell(12).innerHTML = 0;
-		let cell14 = row.insertCell(13);
-		cell14.innerHTML = element.tsym;
-		cell14.setAttribute('class', 'd-none')
-		sendMessageToSocket(`{"t":"t","k":"${element.exch}|${element.token}"}`);
-		sendMessageToSocket(`{"t":"d","k":"${element.exch}|${element.token}"}`);
+		
 	});
 	let tfoot = document.createElement('tfoot');
 	tfoot.innerHTML = `<tr>
