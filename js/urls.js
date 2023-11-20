@@ -335,7 +335,7 @@ async function pos() {
                 row.insertCell(
                     2
                 ).innerHTML = `<button class="convert" onclick = "convert(this)"><i class="fa-solid fa-rotate"></i></button> <button class="exit" onclick = "exit(this)"><i class="fa-solid fa-xmark"></i></button>`; //modify
-                row.insertCell(3).innerHTML = element.dname;
+                row.insertCell(3).innerHTML = element.exch =="NFO" ? element.dname : element.tsym;
                 row.insertCell(4).innerHTML = element.netqty;
                 row.insertCell(5).innerHTML =
                     element.daybuyqty == "0" && element.daysellqty == "0"
