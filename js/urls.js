@@ -319,7 +319,7 @@ async function pos() {
 		});
 		setTimeout(() => {
 			pos.forEach((element) => {
-                let row = tbody.insertRow(-1);
+                let row = posbody.insertRow(-1);
                 row.classList.add("posTr");
                 element.netqty == 0 ? row.classList.add('fade-pos') : row.classList.remove('fade-pos');
                 // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
